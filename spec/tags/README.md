@@ -8,8 +8,6 @@
 - 自治体内部の管理とは分離する
 - 全国どこでも同じ分類体系で扱える
 - AI による自動分類が可能
-- 子どもでも理解できる
-  という目的で設計されています。
 
 ------------------------------------------------------------
 
@@ -17,8 +15,10 @@
 
 分類体系は階層構造（field → medium）で構成されます。
 
+```text
 field（大分類）
-└── medium（中分類）
+  └── medium（中分類）
+```
 
 issue_type には medium の tag_id を格納します。
 field は parent_id から辿ることで取得できます。
@@ -131,9 +131,11 @@ community_facilities       | 地域施設
 GeoJSON の properties.issue_type には
 medium の tag_id を格納します。
 
+```text
 例：
 
 "issue_type": "childcare_nursery"
+```
 
 UI や分析では parent_id を辿ることで
 大分類（field）を取得できます。
