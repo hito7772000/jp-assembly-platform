@@ -1,0 +1,55 @@
+name: "Spec Proposal"
+description: "仕様・方針・構造に関する議論用 Issue"
+title: "[Spec] "
+labels: ["spec", "discussion"]
+body:
+  - type: input
+    id: purpose
+    attributes:
+      label: "1. Purpose（目的）"
+      description: "この Issue で決めたいことを 1 行で書いてください。"
+      placeholder: "例：市民投稿データの JSON 標準を決める"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: layers
+    attributes:
+      label: "2. Related Layers（関係レイヤー）"
+      description: "該当するレイヤーを選択してください。"
+      options:
+        - label: citizen
+        - label: assembly
+        - label: admin
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "3. Context（背景）"
+      description: "なぜ必要か、どんな課題があるか、簡潔に書いてください。"
+      placeholder: "背景・課題・関連する議論など"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "4. Proposal（提案）"
+      description: "提案内容、選択肢、判断基準（公平性・再現性・心理的安全性など）を書いてください。"
+      placeholder: "- 提案内容\n- 選択肢\n- 判断基準"
+    validations:
+      required: true
+
+  - type: textarea
+    id: open_questions
+    attributes:
+      label: "5. Open Questions（未決定点）"
+      description: "議論したい点を箇条書きで書いてください。"
+      placeholder: "- 未決定点1\n- 未決定点2"
+
+  - type: textarea
+    id: related
+    attributes:
+      label: "6. Related Documents / Specs"
+      description: "関連する spec/ や README、外部資料へのリンクを書いてください。"
+      placeholder: "- spec/xxx.md\n- 外部資料URL"
